@@ -1,14 +1,28 @@
+import { useState } from "react";
 import "./App.css";
 import HomePage from "./Pages/Home";
-import Main from "./State/Main";
 
 function App() {
+  const [counter, setCounter] = useState(0);
+  // increment the counter by one : update the state
+  const increment = () => {
+    setCounter(counter + 1);
+  };
+  // decrement the counter by one : update the state
+  const decrement = () => {
+    if (counter > 0) {
+      // setCounter is a function that takes the new value of the state 
+      setCounter(counter - 1);
+    }
+  };
   return (
-    <HomePage>
-      <h1>Home Page</h1>
-      <img src='https://picsum.photos/200/300' alt='random' />
-      <Main title='Counter' />
-    </HomePage>
+    <>
+      {/* <button onClick={increment}F>Increment</button>
+      <h1>Counter: {counter}</h1>
+      <button onClick={decrement}>Decrement</button> */}
+
+      <HomePage />
+    </>
   );
 }
 

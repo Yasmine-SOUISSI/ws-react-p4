@@ -27,7 +27,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function CardItem({ item, handleName }) {
+export default function CardItem({ item, handleName, deleteProduct }) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -66,7 +66,9 @@ export default function CardItem({ item, handleName }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label='add to favorites'>
+        <IconButton aria-label='add to favorites'
+          onClick={() => deleteProduct(item.id)}
+        >
           <FavoriteIcon />
         </IconButton>
         <IconButton aria-label='share'>

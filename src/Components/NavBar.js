@@ -15,7 +15,6 @@ import AdbIcon from "@mui/icons-material/Adb";
 import PropTypes from "prop-types";
 
 const NavBar = (props) => {
-  console.log("props", props);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
